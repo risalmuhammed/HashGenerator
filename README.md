@@ -4,7 +4,8 @@ A Tool to generate hashes and checksums.
 A while back i wrote a command line tool in _Python3_ for generating different hashes.
 
 Then i thought that it would be good if i made it GUI tool. Made use of the _Tkinter_ to build the GUI.
-Hashes include :
+
+##Hashes include :
 
 * MD5
 * MD4
