@@ -24,5 +24,6 @@ TODO: Add Tiger, Gost, Haval etc. ~~and Generate all for file too.~~
 
 ##Changelog:
 
+[11-Aug-2015 09:09PM GMT+5:30]
 - Added support for generating hashes of files.
 - Slightely faster
