@@ -20,4 +20,9 @@ Then i thought that it would be good if i made it GUI tool. Made use of the _Tki
 * DSA
 * WHIRLPOOL
 
-TODO: Add Tiger, Gost, Haval etc. and Generate all for file too.
+TODO: Add Tiger, Gost, Haval etc. ~~and Generate all for file too.~~
+
+##Changelog:
+
+- Added support for generating hashes of files.
+- Slightely faster
