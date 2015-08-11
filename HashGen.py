@@ -1,5 +1,6 @@
 __author__ = 'Rizal'
 from tkinter import *
+from tkinter.ttk import Separator
 import hashlib as hlb
 from zlib import crc32, adler32
 
@@ -7,12 +8,15 @@ from zlib import crc32, adler32
 class MyClass:
     def __init__(self, master):
 
-        self.label = Label(master, text="Key:", fg="blue")
-        self.label.grid(row=0)
+        self.label = Label(master, text="KEY:", fg="blue")
+        self.label.grid(row=0, sticky=E)
         self.entry = Entry(master, width="128")
         self.entry.grid(row=0, column=1, padx=5)
         self.button = Button(master, text="Hashify!", fg="red", command=self.calc_hash)
-        self.button.grid(row=13, column=1, padx=5, pady=3)
+        self.button.grid(row=14, column=1, padx=5, pady=3)
+
+        self.sep = Separator(master, orient=HORIZONTAL)
+        self.sep.grid(row=1, sticky='we', columnspan=2, pady=5, padx=5)
 
         self.l_md5 = Label(master, text="MD5:", fg="blue")
         self.l_sha1 = Label(master, text="SHA1:", fg="blue")
@@ -40,41 +44,41 @@ class MyClass:
         self.entryCrc = Entry(master, width="128")
         self.entryAdler = Entry(master, width="128")
 
-        self.l_md5.grid(row=1)
-        self.entryMd5.grid(row=1, column=1)
+        self.l_md5.grid(row=2, sticky=E)
+        self.entryMd5.grid(row=2, column=1)
 
-        self.l_sha1.grid(row=2)
-        self.entrySha1.grid(row=2, column=1)
+        self.l_sha1.grid(row=3, sticky=E)
+        self.entrySha1.grid(row=3, column=1)
 
-        self.l_sha224.grid(row=3)
-        self.entrySha224.grid(row=3, column=1)
+        self.l_sha224.grid(row=4, sticky=E)
+        self.entrySha224.grid(row=4, column=1)
 
-        self.l_sha256.grid(row=4)
-        self.entrySha256.grid(row=4, column=1)
+        self.l_sha256.grid(row=5, sticky=E)
+        self.entrySha256.grid(row=5, column=1)
 
-        self.l_sha384.grid(row=5)
-        self.entrySha384.grid(row=5, column=1)
+        self.l_sha384.grid(row=6, sticky=E)
+        self.entrySha384.grid(row=6, column=1)
 
-        self.l_sha512.grid(row=6)
-        self.entrySha512.grid(row=6, column=1)
+        self.l_sha512.grid(row=7, sticky=E)
+        self.entrySha512.grid(row=7, column=1)
 
-        self.l_md4.grid(row=7)
-        self.entryMd4.grid(row=7, column=1)
+        self.l_md4.grid(row=8, sticky=E)
+        self.entryMd4.grid(row=8, column=1)
 
-        self.l_ripemd.grid(row=8)
-        self.entryRipeMd.grid(row=8, column=1)
+        self.l_ripemd.grid(row=9, sticky=E)
+        self.entryRipeMd.grid(row=9, column=1)
 
-        self.l_whirl.grid(row=9)
-        self.entryWhirl.grid(row=9, column=1)
+        self.l_whirl.grid(row=10, sticky=E)
+        self.entryWhirl.grid(row=10, column=1)
 
-        self.l_dsa.grid(row=10)
-        self.entryDsa.grid(row=10, column=1)
+        self.l_dsa.grid(row=11, sticky=E)
+        self.entryDsa.grid(row=11, column=1)
 
-        self.l_crc32.grid(row=11)
-        self.entryCrc.grid(row=11, column=1)
+        self.l_crc32.grid(row=12, sticky=E)
+        self.entryCrc.grid(row=12, column=1)
 
-        self.l_adler32.grid(row=12)
-        self.entryAdler.grid(row=12, column=1)
+        self.l_adler32.grid(row=13, sticky=E)
+        self.entryAdler.grid(row=13, column=1)
 
         # Disable all the Entry fields
         self.disable_entry()
@@ -112,7 +116,7 @@ class MyClass:
         self.dsa.update(txt.encode("utf-8"))
         self.entryDsa.insert(0, self.dsa.hexdigest())
 
-        # Staring from index 2 to get rid of the '0x'
+        # Starting from index 2 to get rid of the '0x'
         # crc32
         self.entryCrc.insert(0, hex(crc32(txt.encode("utf-8")))[2:])
         # adler32
@@ -173,6 +177,3 @@ my = MyClass(mainWindow)
 mainWindow.resizable(width=FALSE, height=FALSE)
 mainWindow.title("HashCalc")
 mainWindow.mainloop()
-
-
-
