@@ -13,7 +13,7 @@ class MyClass:
         # By default drop down menu will have Text mode
         self.list_choice = 'Text'
 
-        self.label = Label(master, text="DATA:", fg="blue")
+        self.label = Label(master, text="DATA:", fg="#ED3276")
         self.label.grid(row=2, sticky=W, padx=5)
 
         self.entry = Entry(master, width="128")
@@ -37,18 +37,18 @@ class MyClass:
         self.sep2 = Separator(master, orient=HORIZONTAL)
         self.sep2.grid(row=3, sticky='we', columnspan=2, pady=5, padx=5)
 
-        self.l_md5 = Label(master, text="MD5:", fg="blue")
-        self.l_sha1 = Label(master, text="SHA1:", fg="blue")
-        self.l_sha224 = Label(master, text="SHA-224:", fg="blue")
-        self.l_sha256 = Label(master, text="SHA-256:", fg="blue")
-        self.l_sha384 = Label(master, text="SHA-384:", fg="blue")
-        self.l_sha512 = Label(master, text="SHA-512:", fg="blue")
-        self.l_ripemd = Label(master, text="RIPE-MD-160:", fg="blue")
-        self.l_md4 = Label(master, text="MD4:", fg="blue")
-        self.l_whirl = Label(master, text="WHIRLPOOL:", fg="blue")
-        self.l_dsa = Label(master, text="DSA:", fg="blue")
-        self.l_crc32 = Label(master, text="CRC-32:", fg="blue")
-        self.l_adler32 = Label(master, text="ADLER-32:", fg="blue")
+        self.l_md5 = Label(master, text="MD5:", fg="#ED3276")
+        self.l_sha1 = Label(master, text="SHA1:", fg="#ED3276")
+        self.l_sha224 = Label(master, text="SHA-224:", fg="#ED3276")
+        self.l_sha256 = Label(master, text="SHA-256:", fg="#ED3276")
+        self.l_sha384 = Label(master, text="SHA-384:", fg="#ED3276")
+        self.l_sha512 = Label(master, text="SHA-512:", fg="#ED3276")
+        self.l_ripemd = Label(master, text="RIPE-MD-160:", fg="#ED3276")
+        self.l_md4 = Label(master, text="MD4:", fg="#ED3276")
+        self.l_whirl = Label(master, text="WHIRLPOOL:", fg="#ED3276")
+        self.l_dsa = Label(master, text="DSA:", fg="#ED3276")
+        self.l_crc32 = Label(master, text="CRC-32:", fg="#ED3276")
+        self.l_adler32 = Label(master, text="ADLER-32:", fg="#ED3276")
 
         self.entryMd5 = Entry(master, width="128")
         self.entryMd4 = Entry(master, width="128")
